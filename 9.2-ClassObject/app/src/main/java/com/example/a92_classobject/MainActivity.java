@@ -15,27 +15,15 @@ public class MainActivity extends AppCompatActivity {
 
         textView =findViewById(R.id.textView);
 
-        BagOfCheese bag1 = new BagOfCheese();
-        bag1.kind = "Cheddar";
-        bag1.weight = 2.43;
-        bag1.daysAged = 30;
-        bag1.isDomestic = true;
-
-        BagOfCheese bag2 = new BagOfCheese();
-        bag2.kind = "Blue";
-        bag2.weight = 5.987;
-        bag2.daysAged = 90;
-        bag2.isDomestic = false;
+        BagOfCheese bag1 = new BagOfCheese("Cheddar", 2.43, 30, true);
+        BagOfCheese bag2 = new BagOfCheese("Blue", 5.987, 90, false);
 
         textView.setText("");
 
-        textView.append(toString(bag1));
-        textView.append(toString(bag2));
+        textView.append(bag1.toString());
+        textView.append(bag2.toString());
 
     }
 
-    private String toString(BagOfCheese bag) {
-        return bag.kind +","+ bag.weight + ", " +
-                bag.daysAged + ", " + bag.isDomestic + "\n";
-    }
+
 }
