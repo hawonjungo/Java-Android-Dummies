@@ -1,0 +1,2 @@
+rootProject.name = "12.5-CollectionClass"
+include ':app'
